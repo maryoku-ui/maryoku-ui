@@ -1,0 +1,55 @@
+{
+  "license": "MIT",
+  "name": "repo",
+  "scripts": {
+    "contributors:generate": "all-contributors generate",
+    "log": "./node_modules/.bin/conventional-changelog -i CHANGELOG.md -s -r 0",
+    "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
+    "postversion": "npm run log"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{mjs,js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "branch": "main",
+    "platform": "github",
+    "url": "git@github.com:innocces/repo-template.git",
+    "type": "git"
+  },
+  "authors": [
+    "innocces <jiangjiangjiangxi@gmail.com> (https://github.com/innocces)"
+  ],
+  "devDependencies": {
+    "babel-plugin-transform-async-to-promises": "^0.8.18",
+    "commitizen": "^4.2.5",
+    "conventional-changelog-cli": "^2.2.2",
+    "cross-env": "^7.0.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "del": "^7.0.0",
+    "fs-extra": "^10.1.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-less": "^5.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "lint-staged": "^13.0.3",
+    "new-github-release-url": "^2.0.0",
+    "prettier": "^2.7.1",
+    "ts-node": "^10.9.1",
+    "yorkie": "^2.0.0",
+    "zx": "^7.1.1"
+  }
+}

@@ -1,0 +1,5 @@
+packages/**/*.md
+packages/**/*.mdx
+package.json
+# product dir
+dist
