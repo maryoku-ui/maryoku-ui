@@ -1,7 +1,8 @@
 <div align="center">
-  <img width="150" src="https://api.iconify.design/icon-park:repositioning.svg?color=%23888888" />
+  <img width="150" src="https://cdn.jsdelivr.net/gh/innocces/DrawingBed/2022-10-16/1665903150414-z-rect.png" />
 
-  <h2>Repo</h2>
+  <h2>maryoku-ui</h2>
+  <h2>[máꜜryòkù]</h2>
 
-  <p>some cli setting common file</p>
+  <p>use UI like [máꜜryòkù]</p>
 </div>

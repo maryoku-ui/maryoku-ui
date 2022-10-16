@@ -1,6 +1,6 @@
 {
   "license": "MIT",
-  "name": "repo",
+  "name": "maryoku-ui",
   "scripts": {
     "contributors:generate": "all-contributors generate",
     "log": "./node_modules/.bin/conventional-changelog -i CHANGELOG.md -s -r 0",
@@ -27,7 +27,7 @@
   "repository": {
     "branch": "main",
     "platform": "github",
-    "url": "git@github.com:innocces/repo-template.git",
+    "url": "git@github.com:innocces/maryoku-ui.git",
     "type": "git"
   },
   "authors": [

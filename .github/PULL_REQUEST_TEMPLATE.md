@@ -6,7 +6,7 @@ Pull requests will be merged after one of the collaborators approve.
 Please makes sure that these forms are filled before submitting your pull request, thank you!
 -->
 
-[[中文版模板 / Chinese template](https://github.com/innocces/repo-template/blob/main/.github/PULL_REQUEST_TEMPLATE/pr_cn.md)]
+[[中文版模板 / Chinese template](https://github.com/innocces/maryoku-ui/blob/main/.github/PULL_REQUEST_TEMPLATE/pr_cn.md)]
 
 ### 🤔 This is a ...
 
