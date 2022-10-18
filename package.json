@@ -8,7 +8,7 @@
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
     "bump": "pnpm changeset version && pnpm install",
     "deploy": "pnpm publish -r",
-    "postversion": "npm run log"
+    "postversion": "pnpm run log"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"

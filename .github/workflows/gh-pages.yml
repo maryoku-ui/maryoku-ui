@@ -10,10 +10,16 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-      - run: npm i -g yarn
-      - run: npm i -g lerna
-      - run: yarn install
-      # - run: yarn docs:build:gh
+      - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7.13.5
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
