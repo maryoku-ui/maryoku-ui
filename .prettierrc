@@ -2,10 +2,17 @@
   "singleQuote": true,
   "trailingComma": "all",
   "printWidth": 100,
+  "plugins": ["prettier-plugin-astro"],
   "overrides": [
     {
       "files": ".prettierrc",
       "options": { "parser": "json" }
+    },
+    {
+      "files": "*.astro",
+      "options": {
+        "parser": "astro"
+      }
     }
   ]
 }
