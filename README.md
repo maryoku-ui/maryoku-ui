@@ -5,9 +5,7 @@
 
   <p>以<strong>web</strong>优先的<strong>UI</strong>组件库. 希望它可以给使用者提供源源不断的魔力(máꜜryòkù)</p>
 
-  <video controls width="100%">
-    <source src="https://cdn.jsdelivr.net/gh/innocces/DrawingBed/latest/background.mp4" type="video/mp4"></source>
-  </video>
+![](https://cdn.jsdelivr.net/gh/innocces/maryoku-ui/docs/public/video/background.mp4)
 
 </div>
 
