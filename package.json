@@ -3,6 +3,11 @@
   "private": true,
   "name": "maryoku-ui",
   "scripts": {
+    "doc:dev": "pnpm --filter @maryoku-ui/docs run start",
+    "doc:build": "pnpm --filter @maryoku-ui/docs run build",
+    "doc:build:gh": "cross-env SITE=gh pnpm doc:build",
+    "doc:build:deno": "cross-env SITE=deno pnpm doc:build",
+    "doc:build:render": "cross-env SITE=render pnpm doc:build",
     "contributors:generate": "all-contributors generate",
     "log": "./node_modules/.bin/conventional-changelog -i CHANGELOG.md -s -r 0",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
@@ -14,11 +19,11 @@
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "*.{mjs,js,jsx,less,md,json}": [
-      "prettier --write"
+    "*.{mjs,js,jsx,less,md,json,astro}": [
+      "prettier --write --plugin-search-dir=."
     ],
     "*.ts?(x)": [
-      "prettier --parser=typescript --write"
+      "prettier --plugin-search-dir=. --parser=typescript --write"
     ]
   },
   "publishConfig": {
@@ -40,6 +45,7 @@
     "@babel/core": "^7.19.3",
     "@babel/preset-env": "^7.19.4",
     "@changesets/cli": "^2.25.0",
+    "@commitlint/config-conventional": "^17.1.0",
     "@types/node": "^18.11.0",
     "babel-plugin-transform-async-to-promises": "^0.8.18",
     "commitizen": "^4.2.5",
@@ -55,10 +61,16 @@
     "lint-staged": "^13.0.3",
     "new-github-release-url": "^2.0.0",
     "prettier": "^2.7.1",
+    "prettier-plugin-astro": "^0.5.5",
     "ts-node": "^10.9.1",
     "typescript": "^4.8.4",
     "yorkie": "^2.0.0",
     "zx": "^7.1.1"
   },
-  "packageManager": "pnpm@7.13.5"
+  "packageManager": "pnpm@7.13.5",
+  "peerDependenciesMeta": {
+    "babel-eslint": {
+      "optional": true
+    }
+  }
 }

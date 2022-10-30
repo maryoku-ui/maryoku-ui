@@ -1,0 +1,64 @@
+---
+import IndexLayout from 'layouts/IndexLayout.astro';
+---
+
+<IndexLayout>
+  <div class="md:pt-custom w-full max-w-full max-h-max flex-grow flex-shrink-0 m-auto my-0">
+    <div class="md:pb-32">
+      <div class="py-12">
+        <div class="container m-auto flex flex-col md:flex-row">
+          <div class="w-full md:w-2/4 text-center md:text-left order-2 md:order-1">
+            <h1 class="text-3xl font-bold md:text-6xl">
+              <span
+                class="bg-gradient-to-r from-veryperi-200 to-veryperi-500 text-transparent bg-clip-text"
+                >maryoku-ui</span
+              >
+            </h1>
+            <p
+              class="m-0 text-beutral-800 dark:text-neutral-200 font-bold text-3xl leading-10 md:text-5xl md:leading-tight"
+            >
+              以web优先的UI组件库
+            </p>
+            <p
+              class="pt-3 text-lg md:text-2xl leading-9 m-0 font-medium text-neutral-700 dark:text-neutral-300"
+            >
+              use UI like [máꜜryòkù]
+              <samp
+                class="rounded-lg bg-veryperi-500 px-2 py-1 ml-2 text-white text-sm font-bold align-middle"
+                >discuss</samp
+              >
+            </p>
+            <div
+              class="pt-6 md:pt-8 flex flex-wrap align-middle justify-center md:justify-start -m-2"
+            >
+              <div class="p-2 flex-shrink-0">
+                <a
+                  class="inline-block hover:no-underline bg-veryperi-500 hover:bg-veryperi-400 transition-colors text-white rounded-3xl border-veryperi-400 border border-solid px-5 text-sm leading-9"
+                  href="https://github.com/innocces/maryoku-ui/discussions/1"
+                  target="_blank">讨论阶段</a
+                >
+              </div>
+              <div class="p-2 flex-shrink-0">
+                <a
+                  class="inline-block hover:no-underline bg-white dark:bg-neutral-700 hover:bg-neutral-600 transition-colors text-neutral-700 dark:text-neutral-300 rounded-3xl border-neutral-400 border border-solid px-5 text-sm leading-9"
+                  href="https://github.com/innocces/maryoku-ui"
+                  target="_blank">在Github上查看</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="w-full min-h-full md:w-2/4 order-1 md:order-2">
+            <div class="relative flex align-middle justify-center m-auto">
+              <div
+                class="absolute w-64 h-64 md:w-80 md:h-80 rounded-full animate-pulse bg-gradient-to-tl from-veryperi-700 to-veryperi-500"
+                style="filter: blur(72px)"
+              >
+              </div>
+              <img class="relative animate-bounce w-64 md:max-w-xs z-10" src="/image/monsho.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</IndexLayout>
