@@ -1,0 +1,34 @@
+---
+import PageContent from 'components/PageContent/PageContent.astro';
+import LeftSidebar from 'components/LeftSidebar/LeftSidebar.astro';
+import RightSidebar from 'components/RightSidebar/RightSidebar.astro';
+import IndexLayout from 'layouts/IndexLayout.astro';
+import * as CONFIG from 'src/config';
+import type { MarkdownHeading } from 'astro';
+
+type Props = {
+  frontmatter: CONFIG.Frontmatter;
+  headings: MarkdownHeading[];
+};
+
+const { frontmatter, headings } = Astro.props as Props;
+const currentPage = Astro.url.pathname;
+const currentFile = `src/pages${currentPage.replace(/\/$/, '')}.md`;
+const githubEditUrl = `${CONFIG.GITHUB_EDIT_URL}/${currentFile}`;
+---
+
+<IndexLayout frontmatter={frontmatter}>
+  <main class="container mx-auto md:pt-custom">
+    <aside id="grid-left" class="grid-sidebar" title="Site Navigation">
+      <LeftSidebar currentPage={currentPage} />
+    </aside>
+    <div id="grid-main">
+      <PageContent frontmatter={frontmatter} headings={headings} githubEditUrl={githubEditUrl}>
+        <slot />
+      </PageContent>
+    </div>
+    <aside id="grid-right" class="grid-sidebar" title="Table of Contents">
+      <RightSidebar headings={headings} githubEditUrl={githubEditUrl} />
+    </aside>
+  </main>
+</IndexLayout>

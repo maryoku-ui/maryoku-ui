@@ -1,0 +1,20 @@
+---
+import Header from 'components/Header/Header.astro';
+import Footer from 'components/Footer/Footer.astro';
+import StructLayout from 'layouts/StructLayout.astro';
+import type * as CONFIG from 'src/config';
+
+type Props = {
+  frontmatter?: CONFIG.Frontmatter;
+};
+
+const { frontmatter } = Astro.props as Props;
+const currentPage = Astro.url.pathname;
+const currentFile = `src/pages${currentPage.replace(/\/$/, '')}.md`;
+---
+
+<StructLayout frontmatter={frontmatter}>
+  <Header currentPage={currentPage} />
+  <slot />
+  <Footer path={currentFile} />
+</StructLayout>

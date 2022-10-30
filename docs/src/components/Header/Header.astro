@@ -1,0 +1,147 @@
+---
+import * as CONFIG from '../../config';
+import Logo from './Logo.astro';
+import SkipToContent from './SkipToContent.astro';
+import SidebarToggle from './SidebarToggle';
+import ThemeToggleButton from './ThemeToggleButton';
+import Search from './Search';
+import Social from './Social';
+
+import './style/header.less';
+
+type Props = {
+  currentPage: string;
+};
+---
+
+<header
+  class="static p-0 px-2 h-14 bg-white/[.7] md:fixed md:h-custom md:px-9 dark:bg-neutral-800/[.7]"
+>
+  <SkipToContent />
+  <nav class="flex justify-between w-full" title="Top Navigation">
+    <div class="md:hidden">
+      <SidebarToggle client:idle />
+    </div>
+    <div class="flex align-middle">
+      <Logo size={24} />
+      <a href="/" class="ml-2 text-base font-semibold dark:text-white/[.87] text-neutral-800/[.87]">
+        {CONFIG.SITE.title ?? 'Documentation'}
+      </a>
+    </div>
+    <div class="flex flex-grow justify-end md:justify-start">
+      <Search client:idle />
+    </div>
+    <div class="flex justify-end features">
+      <ThemeToggleButton client:idle />
+      <Social client:idle />
+    </div>
+  </nav>
+</header>
+
+<style>
+  header {
+    z-index: 11;
+    height: var(--theme-navbar-height);
+    width: 100%;
+    background-color: var(--theme-navbar-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+  }
+
+  .logo {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+    width: 30px;
+    font-size: 2rem;
+    flex-shrink: 0;
+    font-weight: 600;
+    line-height: 1;
+    color: hsla(var(--color-base-white), 100%, 1);
+    gap: 0.25em;
+    z-index: -1;
+  }
+
+  .logo a {
+    display: flex;
+    padding: 0.5em 0.25em;
+    margin: -0.5em -0.25em;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .logo a {
+    transition: color 100ms ease-out;
+    color: var(--theme-text);
+  }
+
+  .logo a:hover,
+  .logo a:focus {
+    color: var(--theme-text-accent);
+  }
+
+  .logo h1 {
+    display: none;
+    font: inherit;
+    color: inherit;
+    margin: 0;
+  }
+
+  .nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1em;
+    width: 100%;
+    max-width: 82em;
+    padding: 0 1rem;
+  }
+
+  @media (min-width: 50em) {
+    header {
+      position: static;
+      padding: 2rem 0rem;
+    }
+
+    .logo {
+      width: auto;
+      margin: 0;
+      z-index: 0;
+    }
+
+    .logo h1 {
+      display: initial;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+  }
+
+  /** Style Algolia */
+  .search-item {
+    display: none;
+    position: relative;
+    z-index: 10;
+    flex-grow: 1;
+    padding-right: 0.7rem;
+    display: flex;
+    max-width: 200px;
+  }
+
+  @media (min-width: 50em) {
+    .search-item {
+      max-width: 400px;
+    }
+  }
+</style>
+
+<style is:global>
+  .search-item > * {
+    flex-grow: 1;
+  }
+</style>
