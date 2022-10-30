@@ -12,6 +12,9 @@ jobs:
     steps:
       - name: Clone repository
         uses: actions/checkout@v2
+      - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7.13.5
 
       # Not using npm? Change `npm ci` to `yarn install` or `pnpm i`
       - name: Install dependencies
@@ -26,4 +29,4 @@ jobs:
         with:
           project: maryoku-ui # TODO: replace with Deno Deploy project name
           entrypoint: server/entry.mjs
-          root: dist
+          root: dist/dist
