@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="150" src="https://cdn.jsdelivr.net/gh/innocces/maryoku-ui/docs/public/favicon.svg" />
+  <img width="150" src="https://cdn.jsdelivr.net/gh/innocces/maryoku-ui/docs/public/image/favicon.svg" />
 
   <h2>maryoku-ui</h2>
 
@@ -7,8 +7,8 @@
 
   <p>Vertrag ! Ein neuer Nage !  Ein neues Gesetz!</p>
 
-![](https://cdn.jsdelivr.net/gh/innocces/maryoku-ui/docs/public/video/background.mp4)
+![](https://cdn.jsdelivr.net/gh/maryoku-ui/maryoku-ui/docs/public/video/background.mp4)
 
 </div>
 
-[讨论阶段](https://github.com/innocces/maryoku-ui/discussions/1)
+[讨论阶段](https://github.com/maryoku-ui/maryoku-ui/discussions/1)

@@ -6,7 +6,7 @@ export const SITE = {
 
 export const OPEN_GRAPH = {
   image: {
-    src: 'https://cdn.jsdelivr.net/gh/innocces/maryoku-ui/docs/public/favicon.svg',
+    src: 'https://cdn.jsdelivr.net/gh/maryoku-ui/maryoku-ui/docs/public/image/favicon.svg',
     alt: 'maryoku-ui logo',
   },
   twitter: '',

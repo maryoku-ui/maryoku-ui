@@ -1,7 +1,7 @@
 * {
 	box-sizing: border-box;
 	margin: 0;
-  cursor: url('/image/cursor/cursor.ico'), url('/image/cursor/cursor.cur'), url('/favicon.png'), default!important;
+  cursor: url('/image/cursor/cursor.ico'), url('/image/cursor/cursor.cur'), default!important;
 }
 
 /* Global focus outline reset */
