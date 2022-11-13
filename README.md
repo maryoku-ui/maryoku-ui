@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="150" src="https://cdn.jsdelivr.net/gh/innocces/maryoku-ui/docs/public/image/favicon.svg" />
+  <img width="150" src="https://cdn.jsdelivr.net/gh/maryoku-ui/maryoku-ui/docs/public/image/favicon.svg" />
 
   <h2>maryoku-ui</h2>
 
