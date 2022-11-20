@@ -11,8 +11,8 @@ export function checkIsGH(): boolean {
  * @description check cross-env site mode is deno
  * @returns {boolean}
  */
-export function checkIsDENO(): boolean {
-  return process.env.SITE === 'deno';
+export function checkIsSSR(): boolean {
+  return !!process.env.SITE && ['deno', 'render'].includes(process.env.SITE);
 }
 
 /**
