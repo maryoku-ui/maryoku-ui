@@ -11,6 +11,7 @@
     "compile:plop": "tsup --config tsup.plopfile.config.ts",
     "create:pkg": "pnpm run compile:plop && plop pkg",
     "contributors:generate": "all-contributors generate",
+    "build": "pnpm -r run build",
     "log": "./node_modules/.bin/conventional-changelog -i CHANGELOG.md -s -r 0",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
     "bump": "pnpm changeset version && pnpm install",
@@ -37,7 +38,7 @@
   "repository": {
     "branch": "main",
     "platform": "github",
-    "url": "git@github.com:innocces/maryoku-ui.git",
+    "url": "git@github.com:maryoku-ui/maryoku-ui.git",
     "type": "git"
   },
   "authors": [
