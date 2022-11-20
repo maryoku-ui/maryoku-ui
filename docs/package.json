@@ -38,7 +38,7 @@
     "@docsearch/react": "^3.1.0",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
-    "@headlessui/react": "^1.7.3",
+    "@fontsource/inter": "^4.5.14",
     "@heroicons/react": "^2.0.12",
     "@types/node": "^18.0.0",
     "@types/react": "^17.0.45",
