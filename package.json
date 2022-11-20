@@ -8,7 +8,6 @@
     "doc:build:gh": "cross-env SITE=gh pnpm doc:build",
     "doc:build:deno": "cross-env SITE=deno pnpm doc:build",
     "doc:build:render": "cross-env SITE=render pnpm doc:build",
-    "serve:render": "node ./dist/dist/server/entry.mjs",
     "compile:plop": "tsup --config tsup.plopfile.config.ts",
     "create:pkg": "pnpm run compile:plop && plop pkg",
     "contributors:generate": "all-contributors generate",

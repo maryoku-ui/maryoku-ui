@@ -12,6 +12,8 @@ const serverConfig = {
   adapter: process.env.SITE === 'deno' ? deno() : node({ mode: 'standalone' }),
 };
 
+const isSSR = checkIsSSR();
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [
@@ -22,7 +24,7 @@ export default defineConfig({
     sitemap(),
     tailwind(),
   ],
-  outDir: '../dist',
+  outDir: !isSSR ? '../dist' : 'dist',
   site: getSiteURL(),
   base: getBase(),
   vite: {
@@ -32,5 +34,5 @@ export default defineConfig({
       },
     },
   },
-  ...(checkIsSSR() ? serverConfig : {}),
+  ...(isSSR ? serverConfig : {}),
 });

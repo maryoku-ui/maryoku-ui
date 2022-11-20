@@ -24,7 +24,8 @@
     "check": "astro check && tsc",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "serve:render": "node ./dist/server/entry.mjs"
   },
   "dependencies": {
     "@algolia/client-search": "^4.13.1",
