@@ -118,7 +118,7 @@ $ pnpm add @maryoku-ui/{{target}}
 
 ### 👻 参与贡献
 
-项目使用**pnpm**进行管理. 并确保**>= 7.x**
+项目使用**pnpm**进行管理. 并确保 **>= 7.x**
 
 [贡献指南](https://github.com/maryoku-ui/maryoku-ui/blob/main/CONTRIBUTING.md)
 

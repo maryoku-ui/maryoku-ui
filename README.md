@@ -5,7 +5,7 @@ English | [简体中文](./README.zh-Hans.md)
 
   <h2>maryoku-ui</h2>
 
-  <p><strong>web</strong> first <strong>UI</strong> Library. Hope it can provide users with a steady stream of Magic(máꜜryòkù)</p>
+  <p><strong>Web</strong> first <strong>UI</strong> Library. Hope it can provide users with a steady stream of Magic(máꜜryòkù)</p>
 
   <p>Vertrag ! Ein neuer Nage !  Ein neues Gesetz!</p>
 
@@ -122,7 +122,7 @@ We use **pnpm** manage our project, make sure u version **>= 7.x**
 
 [Guid of contribute](https://github.com/maryoku-ui/maryoku-ui/blob/main/CONTRIBUTING.md)
 
-compile ui libriary
+compile UI Library
 
 ```bash
 $ pnpm run build
