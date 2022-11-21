@@ -1,0 +1,41 @@
+import { defineConfig } from 'vite'
+{{#each plugins}}
+{{{this}}}
+{{/each}}
+
+export default defineConfig({
+  plugins: [
+    {{#each plugins}}
+    {{@key}}()
+    {{/each}}
+  ],
+  build: {
+    outDir: "dist",
+    cssCodeSplit: false,
+    lib: {
+      entry: "src/index.ts",
+      formats: ["es", "umd"],
+      fileName: (format) => `maryoku-ui-{{packageName}}.${format}.js`
+    },
+    sourcemap: true,
+    rollupOptions: {
+      external: [
+        {{#each globals}}
+        '{{@key}}',
+        {{/each}}
+      ],
+      output: {
+        globals: {
+          {{#each globals}}
+          '{{@key}}': '{{this}}',
+          {{/each}}
+        }
+      }
+    }
+  },
+  {{#if angular}}
+  resolve: {
+    preserveSymlinks: true,
+  }
+  {{/if}}
+})

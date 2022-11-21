@@ -1,0 +1,62 @@
+{
+  "name": "@maryoku-ui/{{packageName}}",
+  "version": "0.0.0",
+  "description": "{{description}}",
+  "keywords": [
+    "{{packageName}}",
+    "maryoku-ui",
+    "maryoku",
+    "system-ui",
+    "theme",
+    "components"
+  ],
+  "authors": [
+    "innocces <jiangjiangjiangxi@gmail.com> (https://github.com/innocces)"
+  ],
+  "homepage": "https://github.com/maryoku-ui/maryoku-ui#readme",
+  "license": "MIT",
+  "style": "./dist/maryoku-ui.css",
+  "main": "./dist/maryoku-ui-{{packageName}}.umd.js",
+  {{#if qwik}}
+  "qwik": "./dist/maryoku-ui-{{packageName}}.es.js",
+  {{/if}}
+  "module": "./dist/maryoku-ui-{{packageName}}.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/maryoku-ui-{{packageName}}.es.js",
+      "require": "./dist/maryoku-ui-{{packageName}}.umd.js"
+    },
+    "./maryoku-ui.css": {
+      "import": "./dist/maryoku-ui.css",
+      "require": "./dist/maryoku-ui.css"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maryoku-ui/maryoku-ui.git",
+    "directory": "{{outDir}}/{{packageName}}"
+  },
+  "bugs": {
+    "url": "https://github.com/maryoku-ui/maryoku-ui/issues"
+  },
+  "scripts": {
+    "build": "{{{buildCommand}}}"
+  },
+  "peerDependencies": {
+    {{#each peerDependencies}}
+    "{{@key}}": "{{this}}"{{#unless @last}},{{/unless}}
+    {{/each}}
+  },
+  "devDependencies": {
+    {{#each devDependencies}}
+    "{{@key}}": "{{this}}"{{#unless @last}},{{/unless}}
+    {{/each}}
+  }
+}

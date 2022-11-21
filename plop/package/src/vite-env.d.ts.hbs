@@ -1,0 +1,10 @@
+{{#if svelte}}///<reference types="svelte" />{{/if}}
+///<reference types="vite/client" />
+
+{{#if vue}}
+declare module '*.vue' {
+  import type { DefineComponent } from 'vue'
+  const component: DefineComponent<{}, {}, any>
+  export default component
+}
+{{/if}}

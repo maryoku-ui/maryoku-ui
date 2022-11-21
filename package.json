@@ -2,6 +2,7 @@
   "license": "MIT",
   "private": true,
   "name": "maryoku-ui",
+  "version": "0.0.0",
   "scripts": {
     "doc:dev": "pnpm --filter @maryoku-ui/docs run start",
     "doc:build": "pnpm --filter @maryoku-ui/docs run build",
@@ -12,7 +13,7 @@
     "create:pkg": "pnpm run compile:plop && plop pkg",
     "contributors:generate": "all-contributors generate",
     "build": "pnpm -r run build",
-    "log": "./node_modules/.bin/conventional-changelog -i CHANGELOG.md -s -r 0",
+    "log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
     "bump": "pnpm changeset version && pnpm install",
     "deploy": "pnpm publish -r",
@@ -69,6 +70,7 @@
     "ts-node": "^10.9.1",
     "tsup": "^6.4.0",
     "typescript": "^4.8.4",
+    "vite": "^3.2.4",
     "yorkie": "^2.0.0",
     "zx": "^7.1.1"
   },

@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+  "target": "ESNext",
+  "useDefineForClassFields": true,
+  "module": "ESNext",
+  "moduleResolution": "Node",
+  "strict": true,
+  {{#if jsx}}"jsx": "{{#if vue}}preserve{{else}}react-jsx{{/if}}",{{/if}}
+  {{#if preact}}"jsxImportSource": "preact",{{/if}}
+  {{#if qwik}}"jsxImportSource": "@builder.io/qwik",{{/if}}
+  "resolveJsonModule": true,
+  "isolatedModules": true,
+  "esModuleInterop": true,
+  "lib": ["ESNext", "DOM"{{#if react}}, "DOM.Iterable"{{/if}}],
+  "skipLibCheck": true,
+  "noEmit": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx"{{#if vue}},
+    "src/**/*.vue"{{/if}}{{#if svelte}},
+    "src/**/*.svelte"{{/if}}
+  ],
+  {{#unless webcomponent}}"references": [{ "path": "./tsconfig.node.json" }]{{/unless}}
+}
