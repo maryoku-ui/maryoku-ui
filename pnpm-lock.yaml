@@ -111,7 +111,7 @@ importers:
       preact: 10.11.2
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      tailwindcss: 3.2.0
+      tailwindcss: 3.2.0_postcss@8.4.18
     devDependencies:
       less: 4.1.3
 
@@ -381,7 +381,7 @@ packages:
       '@proload/core': 0.3.3
       autoprefixer: 10.4.12_postcss@8.4.18
       postcss: 8.4.18
-      tailwindcss: 3.2.0
+      tailwindcss: 3.2.0_postcss@8.4.18
     dev: false
 
   /@astrojs/telemetry/1.0.1:
@@ -2945,8 +2945,6 @@ packages:
       '@types/react': 17.0.50
       hoist-non-react-statics: 3.3.2
       react: 18.2.0
-    transitivePeerDependencies:
-      - supports-color
     dev: false
 
   /@emotion/serialize/1.1.0:
@@ -2986,8 +2984,6 @@ packages:
       '@emotion/utils': 1.2.0
       '@types/react': 17.0.50
       react: 18.2.0
-    transitivePeerDependencies:
-      - supports-color
     dev: false
 
   /@emotion/unitless/0.8.0:
@@ -5006,8 +5002,8 @@ packages:
       character-entities: 2.0.2
     dev: false
 
-  /decode-uri-component/0.2.0:
-    resolution: {integrity: sha512-hjf+xovcEn31w/EUYdTXQh/8smFL/dzYjohQGEIgjyNavaJfBY2p5F527Bo1VPATxv0VYTUC2bOcXvqFwk78Og==}
+  /decode-uri-component/0.2.2:
+    resolution: {integrity: sha512-FqUYQ+8o158GyGTrMFJms9qh3CqTKvAqgqsTnkLI8sKu0028orqBhxNMFkFen0zGyg6epACD32pjVk58ngIErQ==}
     engines: {node: '>=0.10'}
     dev: true
 
@@ -6273,7 +6269,7 @@ packages:
     resolution: {integrity: sha512-oWb1Z6mkHIskLzEJ/XWX0srkpkTQ7vaopMQkyaEIoq0fmtFVxOthb8cCxeT+p3ynTdkk/RZwbgG4brR5BeWECw==}
     engines: {node: '>= 4.0'}
     os: [darwin]
-    deprecated: fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2.
+    deprecated: The v1 package contains DANGEROUS / INSECURE binaries. Upgrade to safe fsevents v2
     requiresBuild: true
     dependencies:
       bindings: 1.5.0
@@ -10392,7 +10388,7 @@ packages:
     deprecated: See https://github.com/lydell/source-map-resolve#deprecated
     dependencies:
       atob: 2.1.2
-      decode-uri-component: 0.2.0
+      decode-uri-component: 0.2.2
       resolve-url: 0.2.1
       source-map-url: 0.4.1
       urix: 0.1.0
@@ -10747,10 +10743,12 @@ packages:
       tslib: 2.4.0
     dev: false
 
-  /tailwindcss/3.2.0:
+  /tailwindcss/3.2.0_postcss@8.4.18:
     resolution: {integrity: sha512-ARh/W0uH5UlWIC2nn02V0+5fyF0k6qZliyt4QYic2upOhPUE/Spu1EURNc9txJ3+4j8OEmdigqfDpw4d2tA4vA==}
     engines: {node: '>=12.13.0'}
     hasBin: true
+    peerDependencies:
+      postcss: ^8.0.9
     dependencies:
       arg: 5.0.2
       chokidar: 3.5.3
